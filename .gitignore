@@ -1,0 +1,11 @@
+rethinkdb_data
+**/*.log
+.hz/secrets.toml
+.tscache
+bower_components/
+node_modules/
+tscommand-*.tmp.txt
+typings/
+**/*.js
+**/*.js.map
+**/*.css

@@ -1,0 +1,30 @@
+<h2>Posts!</h2>
+
+<div *ngFor="let post of posts">
+  <h3>{{post.Title}}</h3>
+  <i class="pull-right">{{formatDate(post.Date)}}</i>
+  <div *ngFor="let field of post.Fields">
+    <div [ngSwitch]="field.Type">
+      
+      <!--Header-->
+      <div *ngSwitchCase="fieldType.Header">
+        <label>{{field.Value}}</label>
+      </div>
+
+      <!--Text-->
+      <div *ngSwitchCase="fieldType.Text">
+        <p>{{field.Value}}</p>
+      </div>
+
+      <!--Image-->
+      <div *ngSwitchCase="fieldType.Image">
+        <img src="{{field.Value}}">
+      </div>
+
+      <!--Link-->
+      <div *ngSwitchCase="fieldType.Link">
+        <a href="{{field.Value.link}}">{{field.Value.value}}</a>
+      </div>
+    </div>
+  </div>
+</div>
