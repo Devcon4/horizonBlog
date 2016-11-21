@@ -2,6 +2,7 @@ rethinkdb_data
 **/*.log
 .hz/secrets.toml
 .tscache
+rethinkdb_data
 bower_components/
 node_modules/
 tscommand-*.tmp.txt
@@ -9,3 +10,5 @@ typings/
 **/*.js
 **/*.js.map
 **/*.css
+!Gruntfile.js
+!system-config.js
